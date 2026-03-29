@@ -1,160 +1,163 @@
 import './style.css'
 
 document.querySelector('#app').innerHTML = `
-  <div class="noise" aria-hidden="true"></div>
-  <div class="scanline" aria-hidden="true"></div>
-  <main class="page-shell">
-    <section class="hero panel">
-      <div class="hero-copy">
-        <p class="eyebrow">CYBERNETIC RESUME / PODGORICA NODE</p>
-        <h1>Vladimir Kozlov</h1>
-        <p class="lead">
-          Cloud and automation engineer with 10+ years in IT, focused on resilient
-          infrastructure, delivery speed, and systems that stay calm under pressure.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="https://www.linkedin.com/in/vladimir-kozlov-5268b8a8/" target="_blank" rel="noreferrer">Open LinkedIn</a>
-          <a class="button button-secondary" href="#mission-log">View Resume</a>
-        </div>
+  <div class="ambient ambient-a" aria-hidden="true"></div>
+  <div class="ambient ambient-b" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="hero__topline">
+        <span>Vladimir Kozlov</span>
+        <span>Cloud / DevOps / Platform</span>
+        <span>Podgorica, Montenegro</span>
       </div>
-      <aside class="hero-card">
-        <div class="hero-card__row">
-          <span class="label">Status</span>
-          <span class="value value-online">ONLINE</span>
+
+      <div class="hero__body">
+        <div class="hero__copy panel panel--hero">
+          <p class="kicker">Resume Signal / 2026 Edition</p>
+          <h1>
+            CYBERPUNK
+            <span>but make it editorial.</span>
+          </h1>
+          <p class="lead">
+            Infrastructure, automation, and cloud systems with a cleaner visual language:
+            bold type, atmospheric depth, and a resume that feels like a product launch.
+          </p>
+
+          <div class="hero__actions">
+            <a class="button button--primary" href="#resume">Open Resume</a>
+            <a class="button button--ghost" href="https://www.linkedin.com/in/vladimir-kozlov-5268b8a8/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
         </div>
-        <div class="hero-card__row">
-          <span class="label">Base</span>
-          <span class="value">Podgorica, Montenegro</span>
-        </div>
-        <div class="hero-card__row">
-          <span class="label">Core</span>
-          <span class="value">Automation / Cloud / IaC / Observability</span>
-        </div>
-        <div class="hero-card__row">
-          <span class="label">Signal</span>
-          <span class="value">500+ LinkedIn connections</span>
-        </div>
-      </aside>
+
+        <aside class="hero__stats">
+          <article class="panel stat-card stat-card--accent">
+            <span class="stat-card__label">Experience</span>
+            <strong>10+ years</strong>
+            <p>IT systems, cloud operations, automation, delivery.</p>
+          </article>
+
+          <article class="panel stat-card">
+            <span class="stat-card__label">Primary Signal</span>
+            <strong>AWS / IaC / Observability</strong>
+            <p>Platforms designed to stay readable, reliable, and scalable.</p>
+          </article>
+
+          <article class="panel stat-card">
+            <span class="stat-card__label">Public Presence</span>
+            <strong>500+ connections</strong>
+            <p>LinkedIn profile with visible writing on Terraform, ECS, monitoring, and DevOps.</p>
+          </article>
+        </aside>
+      </div>
     </section>
 
-    <section class="metrics-grid">
-      <article class="metric panel">
-        <span class="metric__value">10+</span>
-        <span class="metric__label">Years in IT</span>
-      </article>
-      <article class="metric panel">
-        <span class="metric__value">24/7</span>
-        <span class="metric__label">Infrastructure mindset</span>
-      </article>
-      <article class="metric panel">
-        <span class="metric__value">IaC</span>
-        <span class="metric__label">Terraform-first operations</span>
-      </article>
-      <article class="metric panel">
-        <span class="metric__value">AWS</span>
-        <span class="metric__label">Cloud delivery focus</span>
-      </article>
+    <section class="ticker" aria-label="Core themes">
+      <div class="ticker__track">
+        <span>Terraform Drift</span>
+        <span>AWS ECS</span>
+        <span>Monitoring Strategy</span>
+        <span>Cloud Automation</span>
+        <span>Platform Reliability</span>
+        <span>Kubernetes</span>
+        <span>Infrastructure as Code</span>
+        <span>Terraform Drift</span>
+        <span>AWS ECS</span>
+        <span>Monitoring Strategy</span>
+      </div>
     </section>
 
-    <section id="mission-log" class="content-grid">
-      <article class="panel section-block section-block--wide">
-        <p class="section-kicker">Mission Brief</p>
-        <h2>About</h2>
+    <section id="resume" class="bento">
+      <article class="panel bento-card bento-card--xl">
+        <p class="kicker">About</p>
+        <h2>Built for teams that want less chaos and more leverage.</h2>
         <p>
-          Public profile data points to a career built around automation, cloud systems,
-          and the practical side of DevOps. The emphasis is not just on shipping faster,
-          but on making infrastructure understandable, observable, and maintainable for teams.
+          The public profile suggests a hands-on engineer who treats automation as a force multiplier,
+          not a slogan. The through-line is practical platform work: improving delivery, reducing drift,
+          and making production systems easier to reason about.
         </p>
         <p>
-          Recent public writing also suggests strong hands-on interest in Terraform, AWS ECS,
-          Kubernetes, logging pipelines, and monitoring strategy, with a preference for solving
-          real operational drift instead of hiding it behind process.
+          Instead of presenting DevOps as pure tooling, this resume frames it as systems thinking:
+          infrastructure that scales with the product and with the team operating it.
         </p>
       </article>
 
-      <article class="panel section-block">
-        <p class="section-kicker">Specialization Stack</p>
-        <h2>Focus Areas</h2>
-        <ul class="chip-list">
-          <li>Cloud Architecture</li>
-          <li>Automation Pipelines</li>
-          <li>Terraform</li>
-          <li>AWS / ECS</li>
-          <li>Kubernetes</li>
-          <li>Observability</li>
-          <li>Monitoring Strategy</li>
-          <li>Reliability Engineering</li>
+      <article class="panel bento-card">
+        <p class="kicker">Focus</p>
+        <h2>What I optimize for</h2>
+        <ul class="stack-list">
+          <li>Automation that removes repetitive operational load</li>
+          <li>Cloud setups that stay maintainable as complexity grows</li>
+          <li>Monitoring that reflects real production behavior</li>
+          <li>Infrastructure choices that fit the team, not just the trend</li>
         </ul>
       </article>
 
-      <article class="panel section-block">
-        <p class="section-kicker">Operator Profile</p>
-        <h2>Working Style</h2>
-        <ul class="signal-list">
-          <li>Turns infrastructure drift into explicit engineering work.</li>
-          <li>Prefers systems that scale without creating team chaos.</li>
-          <li>Builds delivery flows that are fast, visible, and recoverable.</li>
-          <li>Balances pragmatism with strong technical standards.</li>
+      <article class="panel bento-card bento-card--accent">
+        <p class="kicker">Style</p>
+        <h2>Operator profile</h2>
+        <ul class="bullet-list">
+          <li>Pragmatic over theatrical</li>
+          <li>Strong on infrastructure clarity</li>
+          <li>Comfortable close to runtime systems</li>
+          <li>Bias toward observable delivery pipelines</li>
         </ul>
       </article>
 
-      <article class="panel section-block section-block--wide">
-        <p class="section-kicker">Experience Snapshot</p>
-        <h2>What This Resume Highlights</h2>
+      <article class="panel bento-card">
+        <p class="kicker">Stack</p>
+        <h2>Publicly visible themes</h2>
+        <div class="tag-cloud">
+          <span>AWS</span>
+          <span>Terraform</span>
+          <span>ECS</span>
+          <span>Kubernetes</span>
+          <span>Observability</span>
+          <span>Logging</span>
+          <span>Monitoring</span>
+          <span>Automation</span>
+          <span>DevOps</span>
+          <span>Platform</span>
+        </div>
+      </article>
+
+      <article class="panel bento-card bento-card--wide">
+        <p class="kicker">Experience Narrative</p>
+        <h2>Resume in motion</h2>
         <div class="timeline">
-          <div class="timeline__item">
-            <span class="timeline__dot"></span>
+          <div class="timeline__entry">
+            <span class="timeline__index">01</span>
             <div>
-              <h3>Automation-led delivery</h3>
-              <p>
-                Designing repeatable infrastructure and deployment paths that reduce manual work
-                and make engineering output more predictable.
-              </p>
+              <h3>Cloud systems and platform ownership</h3>
+              <p>Operating production environments with attention to scale, resilience, and sane defaults.</p>
             </div>
           </div>
-          <div class="timeline__item">
-            <span class="timeline__dot"></span>
+
+          <div class="timeline__entry">
+            <span class="timeline__index">02</span>
             <div>
-              <h3>Cloud platform operations</h3>
-              <p>
-                Working close to the runtime layer: services, scaling, configuration, and the
-                operational guardrails teams need in production.
-              </p>
+              <h3>Automation-first delivery</h3>
+              <p>Replacing manual infrastructure work with repeatable pipelines and clearer operational flow.</p>
             </div>
           </div>
-          <div class="timeline__item">
-            <span class="timeline__dot"></span>
+
+          <div class="timeline__entry">
+            <span class="timeline__index">03</span>
             <div>
-              <h3>Observability and feedback loops</h3>
-              <p>
-                Treating logs, metrics, and alerts as part of product quality rather than as
-                afterthoughts once systems are already noisy.
-              </p>
+              <h3>Observability as product quality</h3>
+              <p>Using metrics, logs, and alerting as decision tools rather than decorative checkboxes.</p>
             </div>
           </div>
         </div>
       </article>
 
-      <article class="panel section-block">
-        <p class="section-kicker">Public Signal</p>
-        <h2>Recent Themes</h2>
-        <ul class="signal-list">
-          <li>Terraform drift and disciplined infrastructure ownership.</li>
-          <li>ECS as a pragmatic scaling layer for smaller teams.</li>
-          <li>Monitoring strategy beyond basic Prometheus and Grafana talk.</li>
-          <li>Current-state DevOps thinking, not buzzword nostalgia.</li>
-        </ul>
-      </article>
-
-      <article class="panel section-block">
-        <p class="section-kicker">Contact Gateway</p>
-        <h2>Connect</h2>
-        <p>
-          The cleanest contact path currently available from public data is LinkedIn.
-        </p>
-        <div class="contact-links">
-          <a href="https://www.linkedin.com/in/vladimir-kozlov-5268b8a8/" target="_blank" rel="noreferrer">LinkedIn Profile</a>
-          <a href="https://lizaisyourfriend.lol/cv" target="_blank" rel="noreferrer">Live Site URL</a>
+      <article class="panel bento-card">
+        <p class="kicker">Contact</p>
+        <h2>Best entry point</h2>
+        <div class="contact-block">
+          <a href="https://www.linkedin.com/in/vladimir-kozlov-5268b8a8/" target="_blank" rel="noreferrer">linkedin.com/in/vladimir-kozlov-5268b8a8</a>
+          <a href="https://lizaisyourfriend.lol/cv/" target="_blank" rel="noreferrer">lizaisyourfriend.lol/cv</a>
         </div>
       </article>
     </section>
