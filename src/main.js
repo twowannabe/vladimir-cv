@@ -148,22 +148,8 @@ document.querySelector('#app').innerHTML = `
 
       <article class="feature">
         <p class="section-tag">Stack</p>
-        <h2>Tools and areas of focus</h2>
+        <h2>Cloud and infrastructure focus</h2>
         <div class="tag-rack">
-          <span>Python</span>
-          <span>Go</span>
-          <span>Node.js</span>
-          <span>JavaScript</span>
-          <span>React</span>
-          <span>Vite</span>
-          <span>Express</span>
-          <span>Socket.IO</span>
-          <span>Flask</span>
-          <span>Telegram Bots</span>
-          <span>aiogram</span>
-          <span>python-telegram-bot</span>
-          <span>OpenAI API</span>
-          <span>Replicate</span>
           <span>AWS</span>
           <span>Terraform</span>
           <span>Ansible</span>
@@ -179,9 +165,6 @@ document.querySelector('#app').innerHTML = `
           <span>ECS</span>
           <span>Kubernetes</span>
           <span>WebSockets</span>
-          <span>Stripe</span>
-          <span>Twilio</span>
-          <span>SendGrid</span>
           <span>Observability</span>
           <span>Monitoring</span>
           <span>Logging</span>
