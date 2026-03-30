@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,500..700,0&family=Manrope:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
 
 :root {
   --bg: #090b10;
@@ -16,7 +16,7 @@
     radial-gradient(circle at 14% 16%, rgba(113, 240, 210, 0.12), transparent 0 24%),
     radial-gradient(circle at 84% 12%, rgba(154, 146, 255, 0.12), transparent 0 24%),
     linear-gradient(180deg, #080a0e 0%, #0a0d12 100%);
-  font-family: 'Manrope', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   line-height: 1.6;
   font-weight: 400;
   font-synthesis: none;
@@ -121,8 +121,8 @@ button {
 .cover-card__label,
 .theme-toggle__label {
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  font-size: 0.74rem;
 }
 
 .masthead__nav {
@@ -151,7 +151,7 @@ button {
 }
 
 .theme-toggle__value {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .cover {
@@ -185,27 +185,27 @@ h3 {
 .feature h2,
 .contact-block h2,
 .cover-card--feature h2 {
-  font-family: 'Fraunces', serif;
-  font-weight: 600;
-  line-height: 0.94;
-  letter-spacing: -0.03em;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
 }
 
 .cover h1 {
-  font-size: clamp(4rem, 11vw, 9.5rem);
+  font-size: clamp(3.8rem, 10vw, 8.2rem);
   max-width: 8ch;
 }
 
 .cover h1 span {
   display: block;
   color: color-mix(in srgb, var(--text) 80%, var(--amber) 20%);
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .cover__dek {
   max-width: 36rem;
   margin: 28px 0 0;
-  font-size: 1.16rem;
+  font-size: 1.08rem;
   color: var(--text);
 }
 
@@ -326,7 +326,7 @@ h3 {
 .feature h2,
 .contact-block h2 {
   margin: 8px 0 18px;
-  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-size: clamp(1.8rem, 3.3vw, 3rem);
 }
 
 .feature p {
@@ -382,7 +382,8 @@ h3 {
 
 .timeline h3 {
   margin-bottom: 8px;
-  font-size: 1.14rem;
+  font-size: 1.02rem;
+  font-weight: 700;
 }
 
 .timeline p {
@@ -404,6 +405,7 @@ h3 {
 .highlight h3 {
   margin-bottom: 8px;
   font-size: 1.08rem;
+  font-weight: 600;
 }
 
 .highlight p {
