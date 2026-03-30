@@ -1,5 +1,12 @@
 import './style.css'
 
+const themeKey = 'vladimir-cv-theme'
+const savedTheme = localStorage.getItem(themeKey)
+const systemTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+const initialTheme = savedTheme || systemTheme
+
+document.documentElement.dataset.theme = initialTheme
+
 document.querySelector('#app').innerHTML = `
   <div class="page-glow page-glow--left" aria-hidden="true"></div>
   <div class="page-glow page-glow--right" aria-hidden="true"></div>
@@ -9,42 +16,50 @@ document.querySelector('#app').innerHTML = `
       <div class="masthead__line"></div>
       <div class="masthead__row">
         <div class="masthead__brand">VK / RESUME ISSUE</div>
-        <nav class="masthead__nav">
-          <a href="#story">Story</a>
-          <a href="#capabilities">Capabilities</a>
-          <a href="#contact">Contact</a>
-        </nav>
+        <div class="masthead__controls">
+          <nav class="masthead__nav">
+            <a href="#story">Story</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <button class="theme-toggle" type="button" aria-label="Toggle dark and light theme">
+            <span class="theme-toggle__label">Theme</span>
+            <span class="theme-toggle__value">${initialTheme === 'light' ? 'Light' : 'Dark'}</span>
+          </button>
+        </div>
       </div>
     </header>
 
     <section class="cover" id="story">
       <div class="cover__left">
-        <p class="section-tag">Editorial Cyberpunk / 2026</p>
+        <p class="section-tag">Editorial Resume / 2026</p>
         <p class="cover__meta">Podgorica, Montenegro</p>
         <h1>
           Vladimir
           <span>Kozlov</span>
         </h1>
         <p class="cover__dek">
-          Cloud, platform, and automation engineer with 10+ years in IT.
-          Building infrastructure that stays readable, observable, and calm
-          when products stop being small.
+          Cloud, platform, and automation engineer with more than a decade in IT.
+          Building infrastructure that stays readable, observable, and dependable when
+          products stop being small and teams need calm systems instead of extra drama.
         </p>
       </div>
 
       <div class="cover__right">
         <div class="cover-card cover-card--feature">
-          <span class="cover-card__label">Lead Story</span>
-          <h2>Platform work over buzzwords.</h2>
+          <span class="cover-card__label">Profile Summary</span>
+          <h2>Cloud platforms, automation, and operational clarity.</h2>
           <p>
-            The strongest signal is practical judgment: choose the right level of
-            complexity, automate it, and make it visible enough for a team to trust.
+            Public profile data points to a practitioner focused on automation, cloud systems,
+            infrastructure as code, and observability. The through-line is practical judgment:
+            choose the right complexity level, automate it, and make it visible enough for teams
+            to trust.
           </p>
         </div>
 
         <div class="cover-card-grid">
           <div class="cover-card">
-            <span class="cover-card__label">Profile</span>
+            <span class="cover-card__label">Experience</span>
             <strong>10+ years in IT</strong>
           </div>
           <div class="cover-card">
@@ -54,7 +69,7 @@ document.querySelector('#app').innerHTML = `
         </div>
 
         <div class="cover__actions">
-          <a class="button button--primary" href="#capabilities">Read the Resume</a>
+          <a class="button button--primary" href="#experience">Read the Resume</a>
           <a class="button button--ghost" href="https://www.linkedin.com/in/vladimir-kozlov-5268b8a8/" target="_blank" rel="noreferrer">Open LinkedIn</a>
         </div>
       </div>
@@ -66,35 +81,76 @@ document.querySelector('#app').innerHTML = `
       <span>Observability as a decision tool</span>
     </section>
 
-    <section class="feature-grid" id="capabilities">
+    <section class="feature-grid" id="experience">
       <article class="feature feature--primary">
-        <p class="section-tag">Perspective</p>
+        <p class="section-tag">Professional Summary</p>
         <h2>Systems thinking, not tool collecting.</h2>
         <p>
-          Public profile data suggests a hands-on operator working close to real runtime
-          systems: delivery paths, cloud infrastructure, production behavior, and the
-          guardrails teams need as services scale.
+          With over a decade of experience in IT, Vladimir specializes in automation, cloud
+          operations, and platform work that helps engineering teams move faster without making
+          production harder to understand. The emphasis is on resilient delivery paths, clean
+          infrastructure ownership, and observability that supports real decisions.
         </p>
         <p>
-          This is less about hype cycles and more about making infrastructure predictable,
-          maintainable, and legible under pressure.
+          Public activity around Terraform drift, AWS ECS, monitoring strategy, and current-state
+          DevOps shows a practical style: fewer slogans, more maintainable systems.
         </p>
       </article>
 
+      <article class="feature feature--timeline">
+        <p class="section-tag">Places of Work</p>
+        <h2>Work experience and environments</h2>
+        <div class="timeline">
+          <div class="timeline__entry">
+            <span class="timeline__index">01</span>
+            <div>
+              <h3>Panasonic</h3>
+              <p>
+                Current professional context appears to be within Panasonic. Based on the available
+                workspace metadata, this is the only employer I could verify directly in-session.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__entry">
+            <span class="timeline__index">02</span>
+            <div>
+              <h3>Cloud and platform engineering roles</h3>
+              <p>
+                Public profile data clearly points to multi-year work around cloud infrastructure,
+                automation, and platform reliability, even though LinkedIn’s guest view does not
+                expose the full employer timeline.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__entry">
+            <span class="timeline__index">03</span>
+            <div>
+              <h3>Production-facing operational ownership</h3>
+              <p>
+                The visible profile and writing indicate hands-on involvement with delivery pipelines,
+                infrastructure as code, observability, and operational improvements in real production
+                environments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+
       <article class="feature">
-        <p class="section-tag">Strengths</p>
+        <p class="section-tag">Capabilities</p>
         <h2>Where the value shows up</h2>
         <ul class="editorial-list">
-          <li>Turning manual infrastructure work into repeatable flows</li>
-          <li>Keeping cloud systems operable as complexity grows</li>
+          <li>Turning manual infrastructure work into repeatable, auditable flows</li>
+          <li>Keeping cloud systems operable as service complexity grows</li>
           <li>Choosing architecture for team fit, not just trend fit</li>
-          <li>Building monitoring around actionability</li>
+          <li>Building monitoring around actionability instead of noise</li>
+          <li>Reducing configuration drift with clearer infrastructure ownership</li>
         </ul>
       </article>
 
       <article class="feature">
-        <p class="section-tag">Themes</p>
-        <h2>Visible stack and public topics</h2>
+        <p class="section-tag">Stack</p>
+        <h2>Tools and areas of focus</h2>
         <div class="tag-rack">
           <span>AWS</span>
           <span>Terraform</span>
@@ -104,33 +160,30 @@ document.querySelector('#app').innerHTML = `
           <span>Monitoring</span>
           <span>Logging</span>
           <span>Automation</span>
+          <span>Cloud Operations</span>
+          <span>Infrastructure as Code</span>
         </div>
       </article>
 
-      <article class="feature feature--timeline">
-        <p class="section-tag">Resume Narrative</p>
-        <h2>How the work reads on the page</h2>
-        <div class="timeline">
-          <div class="timeline__entry">
-            <span class="timeline__index">01</span>
-            <div>
-              <h3>Cloud platform ownership</h3>
-              <p>Operating production environments that need resilience, clarity, and sane defaults.</p>
-            </div>
+      <article class="feature feature--primary">
+        <p class="section-tag">Selected Resume Highlights</p>
+        <h2>What the work reads like in practice</h2>
+        <div class="highlights">
+          <div class="highlight">
+            <h3>Cloud platform ownership</h3>
+            <p>Operating and shaping runtime environments that need resilience, clarity, and sane defaults.</p>
           </div>
-          <div class="timeline__entry">
-            <span class="timeline__index">02</span>
-            <div>
-              <h3>Automation-first delivery</h3>
-              <p>Reducing repetitive operational work with infrastructure as code and repeatable deployment paths.</p>
-            </div>
+          <div class="highlight">
+            <h3>Automation-first delivery</h3>
+            <p>Reducing repetitive operational work with infrastructure as code and repeatable deployment paths.</p>
           </div>
-          <div class="timeline__entry">
-            <span class="timeline__index">03</span>
-            <div>
-              <h3>Production feedback loops</h3>
-              <p>Using logs, metrics, and alerts to make systems easier to run and faster to debug.</p>
-            </div>
+          <div class="highlight">
+            <h3>Production feedback loops</h3>
+            <p>Using logs, metrics, and alerts to make systems easier to run, debug, and improve.</p>
+          </div>
+          <div class="highlight">
+            <h3>Team-oriented infrastructure choices</h3>
+            <p>Favoring systems that are maintainable by the team that owns them, not just impressive on paper.</p>
           </div>
         </div>
       </article>
@@ -148,3 +201,17 @@ document.querySelector('#app').innerHTML = `
     </section>
   </main>
 `
+
+const toggle = document.querySelector('.theme-toggle')
+const toggleValue = document.querySelector('.theme-toggle__value')
+
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme
+  localStorage.setItem(themeKey, theme)
+  toggleValue.textContent = theme === 'light' ? 'Light' : 'Dark'
+}
+
+toggle.addEventListener('click', () => {
+  const nextTheme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light'
+  applyTheme(nextTheme)
+})
