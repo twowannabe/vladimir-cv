@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@500;600;700;800&display=swap');
 
 :root {
   --bg: #090b10;
@@ -16,7 +16,7 @@
     radial-gradient(circle at 14% 16%, rgba(113, 240, 210, 0.12), transparent 0 24%),
     radial-gradient(circle at 84% 12%, rgba(154, 146, 255, 0.12), transparent 0 24%),
     linear-gradient(180deg, #080a0e 0%, #0a0d12 100%);
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   line-height: 1.6;
   font-weight: 400;
   font-synthesis: none;
@@ -121,7 +121,7 @@ button {
 .cover-card__label,
 .theme-toggle__label {
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   font-size: 0.74rem;
 }
 
@@ -185,27 +185,27 @@ h3 {
 .feature h2,
 .contact-block h2,
 .cover-card--feature h2 {
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'Syne', sans-serif;
   font-weight: 700;
-  line-height: 0.98;
-  letter-spacing: -0.02em;
+  line-height: 0.92;
+  letter-spacing: -0.05em;
 }
 
 .cover h1 {
-  font-size: clamp(3.8rem, 10vw, 8.2rem);
+  font-size: clamp(3.6rem, 9vw, 7.4rem);
   max-width: 8ch;
 }
 
 .cover h1 span {
   display: block;
   color: color-mix(in srgb, var(--text) 80%, var(--amber) 20%);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .cover__dek {
   max-width: 36rem;
   margin: 28px 0 0;
-  font-size: 1.08rem;
+  font-size: 1.04rem;
   color: var(--text);
 }
 
@@ -236,7 +236,7 @@ h3 {
 
 .cover-card--feature h2 {
   margin: 8px 0 14px;
-  font-size: clamp(1.9rem, 3.6vw, 2.9rem);
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
 }
 
 .cover-card-grid {
@@ -326,7 +326,7 @@ h3 {
 .feature h2,
 .contact-block h2 {
   margin: 8px 0 18px;
-  font-size: clamp(1.8rem, 3.3vw, 3rem);
+  font-size: clamp(1.7rem, 3vw, 2.7rem);
 }
 
 .feature p {
