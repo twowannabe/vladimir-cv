@@ -149,28 +149,27 @@ document.querySelector('#app').innerHTML = `
       <article class="feature">
         <p class="section-tag">Stack</p>
         <h2>Cloud and infrastructure focus</h2>
-        <div class="tag-rack">
-          <span>AWS</span>
-          <span>Terraform</span>
-          <span>Ansible</span>
-          <span>nginx</span>
-          <span>systemd</span>
-          <span>S3</span>
-          <span>CloudFront</span>
-          <span>Route53</span>
-          <span>ACM</span>
-          <span>Redis</span>
-          <span>PostgreSQL</span>
-          <span>SQLite</span>
-          <span>ECS</span>
-          <span>Kubernetes</span>
-          <span>WebSockets</span>
-          <span>Observability</span>
-          <span>Monitoring</span>
-          <span>Logging</span>
-          <span>Automation</span>
-          <span>Cloud Operations</span>
-          <span>Infrastructure as Code</span>
+        <div class="tag-cloud" aria-label="Cloud and infrastructure technology cloud">
+          <span class="tag-cloud__item tag-cloud__item--xl">AWS</span>
+          <span class="tag-cloud__item tag-cloud__item--lg">Terraform</span>
+          <span class="tag-cloud__item tag-cloud__item--lg">Kubernetes</span>
+          <span class="tag-cloud__item tag-cloud__item--md">ECS</span>
+          <span class="tag-cloud__item tag-cloud__item--md">S3</span>
+          <span class="tag-cloud__item tag-cloud__item--md">CloudFront</span>
+          <span class="tag-cloud__item tag-cloud__item--md">Route53</span>
+          <span class="tag-cloud__item tag-cloud__item--md">ACM</span>
+          <span class="tag-cloud__item tag-cloud__item--md">Ansible</span>
+          <span class="tag-cloud__item tag-cloud__item--md">nginx</span>
+          <span class="tag-cloud__item tag-cloud__item--sm">systemd</span>
+          <span class="tag-cloud__item tag-cloud__item--sm">Redis</span>
+          <span class="tag-cloud__item tag-cloud__item--sm">PostgreSQL</span>
+          <span class="tag-cloud__item tag-cloud__item--sm">SQLite</span>
+          <span class="tag-cloud__item tag-cloud__item--sm">Observability</span>
+          <span class="tag-cloud__item tag-cloud__item--sm">Monitoring</span>
+          <span class="tag-cloud__item tag-cloud__item--sm">Logging</span>
+          <span class="tag-cloud__item tag-cloud__item--sm">Automation</span>
+          <span class="tag-cloud__item tag-cloud__item--sm">Cloud Operations</span>
+          <span class="tag-cloud__item tag-cloud__item--sm">Infrastructure as Code</span>
         </div>
       </article>
 

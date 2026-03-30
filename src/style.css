@@ -349,18 +349,43 @@ h3 {
   border-bottom: 0;
 }
 
-.tag-rack {
+.tag-cloud {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 18px;
+  align-items: center;
+  gap: 12px 16px;
+  margin-top: 20px;
 }
 
-.tag-rack span {
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.03);
+.tag-cloud__item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.12em 0.18em;
+  line-height: 1;
+  color: var(--text);
+}
+
+.tag-cloud__item--xl {
+  font-size: clamp(2.8rem, 5vw, 4.6rem);
+  font-weight: 700;
+  color: var(--amber);
+}
+
+.tag-cloud__item--lg {
+  font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+  font-weight: 700;
+}
+
+.tag-cloud__item--md {
+  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.tag-cloud__item--sm {
+  font-size: 0.96rem;
+  font-weight: 500;
+  color: var(--muted);
 }
 
 .timeline {
@@ -474,6 +499,18 @@ h3 {
   .contact-block {
     padding: 20px;
     border-radius: 22px;
+  }
+
+  .tag-cloud {
+    gap: 8px 12px;
+  }
+
+  .tag-cloud__item--xl {
+    font-size: 2.6rem;
+  }
+
+  .tag-cloud__item--lg {
+    font-size: 1.4rem;
   }
 
   .cover h1 {
