@@ -98,38 +98,36 @@ document.querySelector('#app').innerHTML = `
       </article>
 
       <article class="feature feature--timeline">
-        <p class="section-tag">Places of Work</p>
-        <h2>Work experience and environments</h2>
+        <p class="section-tag">Experience Profile</p>
+        <h2>What the repository trail says about the work</h2>
         <div class="timeline">
           <div class="timeline__entry">
             <span class="timeline__index">01</span>
             <div>
-              <h3>Panasonic</h3>
+              <h3>Automation and bot development</h3>
               <p>
-                Current professional context appears to be within Panasonic. Based on the available
-                workspace metadata, this is the only employer I could verify directly in-session.
+                Multiple Python repositories show hands-on work with Telegram bots, schedulers,
+                AI integrations, webhooks, content handling, and assistant-style products.
               </p>
             </div>
           </div>
           <div class="timeline__entry">
             <span class="timeline__index">02</span>
             <div>
-              <h3>Cloud and platform engineering roles</h3>
+              <h3>Backend and realtime systems</h3>
               <p>
-                Public profile data clearly points to multi-year work around cloud infrastructure,
-                automation, and platform reliability, even though LinkedIn’s guest view does not
-                expose the full employer timeline.
+                The repositories include Node.js and Go services with authentication, websockets,
+                messaging flows, payment integrations, storage, and production-facing backend logic.
               </p>
             </div>
           </div>
           <div class="timeline__entry">
             <span class="timeline__index">03</span>
             <div>
-              <h3>Production-facing operational ownership</h3>
+              <h3>Infrastructure and cloud operations</h3>
               <p>
-                The visible profile and writing indicate hands-on involvement with delivery pipelines,
-                infrastructure as code, observability, and operational improvements in real production
-                environments.
+                Terraform, Ansible, nginx, and service deployment files point to hands-on ownership
+                of cloud resources, provisioning, deployment flow, and day-two operations.
               </p>
             </div>
           </div>
@@ -152,10 +150,38 @@ document.querySelector('#app').innerHTML = `
         <p class="section-tag">Stack</p>
         <h2>Tools and areas of focus</h2>
         <div class="tag-rack">
+          <span>Python</span>
+          <span>Go</span>
+          <span>Node.js</span>
+          <span>JavaScript</span>
+          <span>React</span>
+          <span>Vite</span>
+          <span>Express</span>
+          <span>Socket.IO</span>
+          <span>Flask</span>
+          <span>Telegram Bots</span>
+          <span>aiogram</span>
+          <span>python-telegram-bot</span>
+          <span>OpenAI API</span>
+          <span>Replicate</span>
           <span>AWS</span>
           <span>Terraform</span>
+          <span>Ansible</span>
+          <span>nginx</span>
+          <span>systemd</span>
+          <span>S3</span>
+          <span>CloudFront</span>
+          <span>Route53</span>
+          <span>ACM</span>
+          <span>Redis</span>
+          <span>PostgreSQL</span>
+          <span>SQLite</span>
           <span>ECS</span>
           <span>Kubernetes</span>
+          <span>WebSockets</span>
+          <span>Stripe</span>
+          <span>Twilio</span>
+          <span>SendGrid</span>
           <span>Observability</span>
           <span>Monitoring</span>
           <span>Logging</span>
@@ -184,6 +210,14 @@ document.querySelector('#app').innerHTML = `
           <div class="highlight">
             <h3>Team-oriented infrastructure choices</h3>
             <p>Favoring systems that are maintainable by the team that owns them, not just impressive on paper.</p>
+          </div>
+          <div class="highlight">
+            <h3>AI product integrations</h3>
+            <p>Shipping applications that connect LLM APIs, media tooling, bot interfaces, and backend workflows.</p>
+          </div>
+          <div class="highlight">
+            <h3>Cross-stack engineering</h3>
+            <p>Comfortable moving between frontend delivery, backend systems, automation scripts, bots, and infrastructure.</p>
           </div>
         </div>
       </article>
