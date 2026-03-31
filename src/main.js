@@ -39,9 +39,9 @@ document.querySelector('#app').innerHTML = `
           <span>Kozlov</span>
         </h1>
         <p class="cover__dek">
-          Cloud, platform, and automation engineer with more than a decade in IT.
-          Building infrastructure that stays readable, observable, and dependable when
-          products stop being small and teams need calm systems instead of extra drama.
+          Senior DevOps and Cloud Engineer with 10+ years of experience designing resilient
+          infrastructure, automating delivery, and scaling production systems in demanding
+          environments.
         </p>
       </div>
 
@@ -86,14 +86,15 @@ document.querySelector('#app').innerHTML = `
         <p class="section-tag">Professional Summary</p>
         <h2>Systems thinking, not tool collecting.</h2>
         <p>
-          With over a decade of experience in IT, Vladimir specializes in automation, cloud
-          operations, and platform work that helps engineering teams move faster without making
-          production harder to understand. The emphasis is on resilient delivery paths, clean
-          infrastructure ownership, and observability that supports real decisions.
+          Senior DevOps and Cloud Engineer with 10+ years of experience designing resilient
+          infrastructure, automating delivery, and scaling production systems in demanding
+          environments. Specializes in AWS, Terraform, Kubernetes, and platform reliability,
+          with a track record of turning complex operations into stable, efficient, and
+          maintainable systems.
         </p>
         <p>
-          Public activity around Terraform drift, AWS ECS, monitoring strategy, and current-state
-          DevOps shows a practical style: fewer slogans, more maintainable systems.
+          Most valuable in senior remote roles where deep technical ownership, sound architectural
+          judgment, and execution without hand-holding are critical.
         </p>
       </article>
 
