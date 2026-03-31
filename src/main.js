@@ -8,82 +8,99 @@ const initialTheme = savedTheme || systemTheme
 document.documentElement.dataset.theme = initialTheme
 
 document.querySelector('#app').innerHTML = `
-  <div class="page-glow page-glow--left" aria-hidden="true"></div>
-  <div class="page-glow page-glow--right" aria-hidden="true"></div>
-
-  <main class="page">
-    <header class="masthead">
-      <div class="masthead__line"></div>
-      <div class="masthead__row">
-        <div class="masthead__brand">VK / RESUME ISSUE</div>
-        <div class="masthead__controls">
-          <nav class="masthead__nav">
-            <a href="#story">Story</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
-          </nav>
-          <button class="theme-toggle" type="button" aria-label="Toggle dark and light theme">
-            <span class="theme-toggle__label">Theme</span>
-            <span class="theme-toggle__value">${initialTheme === 'light' ? 'Light' : 'Dark'}</span>
-          </button>
+  <main class="app-shell">
+    <header class="top-app-bar">
+      <div class="top-app-bar__brand">
+        <div class="brand-mark">VK</div>
+        <div>
+          <p class="brand-title">Vladimir Kozlov</p>
+          <p class="brand-subtitle">Senior DevOps & Cloud Engineer</p>
         </div>
+      </div>
+
+      <div class="top-app-bar__actions">
+        <nav class="top-nav">
+          <a href="#summary">Summary</a>
+          <a href="#experience">Experience</a>
+          <a href="#stack">Stack</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark and light theme">
+          <span class="theme-toggle__icon">◐</span>
+          <span class="theme-toggle__value">${initialTheme === 'light' ? 'Light' : 'Dark'}</span>
+        </button>
       </div>
     </header>
 
-    <section class="cover" id="story">
-      <div class="cover__left">
-        <p class="section-tag">Editorial Resume / 2026</p>
-        <p class="cover__meta">Podgorica, Montenegro</p>
-        <h1>
-          Vladimir
-          <span>Kozlov</span>
-        </h1>
-        <p class="cover__dek">
+    <section class="hero">
+      <article class="hero-card surface">
+        <p class="eyebrow">Professional Profile</p>
+        <h1>Building reliable cloud systems that scale without chaos.</h1>
+        <p class="hero-copy">
           Senior DevOps and Cloud Engineer with 10+ years of experience designing resilient
           infrastructure, automating delivery, and scaling production systems in demanding
           environments.
         </p>
-      </div>
 
-      <div class="cover__right">
-        <div class="cover-card cover-card--feature">
-          <span class="cover-card__label">Profile Summary</span>
-          <h2>Cloud platforms, automation, and operational clarity.</h2>
+        <div class="hero-meta">
+          <div class="meta-chip">
+            <span class="meta-chip__label">Location</span>
+            <strong>Podgorica, Montenegro</strong>
+          </div>
+          <div class="meta-chip">
+            <span class="meta-chip__label">Core Focus</span>
+            <strong>AWS, Terraform, Kubernetes, Platform Reliability</strong>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="button button--filled" href="#experience">Read Resume</a>
+          <a class="button button--tonal" href="https://www.linkedin.com/in/vladimir-kozlov-5268b8a8/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </article>
+
+      <aside class="hero-side">
+        <article class="surface info-card">
+          <p class="eyebrow">At A Glance</p>
+          <ul class="plain-list">
+            <li>10+ years in IT</li>
+            <li>Senior remote-ready ownership</li>
+            <li>Automation, cloud, observability</li>
+          </ul>
+        </article>
+
+        <article class="surface info-card">
+          <p class="eyebrow">Strength Signal</p>
           <p>
-            Public profile data points to a practitioner focused on automation, cloud systems,
-            infrastructure as code, and observability. The through-line is practical judgment:
-            choose the right complexity level, automate it, and make it visible enough for teams
-            to trust.
+            Deep technical ownership, sound architectural judgment, and execution without
+            hand-holding in production-facing environments.
           </p>
-        </div>
-
-        <div class="cover-card-grid">
-          <div class="cover-card">
-            <span class="cover-card__label">Experience</span>
-            <strong>10+ years in IT</strong>
-          </div>
-          <div class="cover-card">
-            <span class="cover-card__label">Core Stack</span>
-            <strong>AWS / Terraform / ECS / Kubernetes</strong>
-          </div>
-        </div>
-
-        <div class="cover__actions">
-          <a class="button button--primary" href="#experience">Read the Resume</a>
-          <a class="button button--ghost" href="https://www.linkedin.com/in/vladimir-kozlov-5268b8a8/" target="_blank" rel="noreferrer">Open LinkedIn</a>
-        </div>
-      </div>
+        </article>
+      </aside>
     </section>
 
-    <section class="ribbon">
-      <span>Automation without operational theater</span>
-      <span>Infrastructure choices that fit the team</span>
-      <span>Observability as a decision tool</span>
+    <section class="metrics-row">
+      <article class="surface metric-card">
+        <span class="metric-card__value">AWS</span>
+        <span class="metric-card__label">Primary cloud platform</span>
+      </article>
+      <article class="surface metric-card">
+        <span class="metric-card__value">IaC</span>
+        <span class="metric-card__label">Terraform-driven workflows</span>
+      </article>
+      <article class="surface metric-card">
+        <span class="metric-card__value">K8s</span>
+        <span class="metric-card__label">Container orchestration</span>
+      </article>
+      <article class="surface metric-card">
+        <span class="metric-card__value">Obs</span>
+        <span class="metric-card__label">Monitoring and logging</span>
+      </article>
     </section>
 
-    <section class="feature-grid" id="experience">
-      <article class="feature feature--primary">
-        <p class="section-tag">Professional Summary</p>
+    <section class="content-grid">
+      <article class="surface section-card section-card--wide" id="summary">
+        <p class="eyebrow">Professional Summary</p>
         <h2>Systems thinking, not tool collecting.</h2>
         <p>
           Senior DevOps and Cloud Engineer with 10+ years of experience designing resilient
@@ -98,47 +115,38 @@ document.querySelector('#app').innerHTML = `
         </p>
       </article>
 
-      <article class="feature feature--timeline">
-        <p class="section-tag">Experience Profile</p>
-        <h2>What the repository trail says about the work</h2>
+      <article class="surface section-card" id="experience">
+        <p class="eyebrow">Experience Profile</p>
+        <h2>Work themes</h2>
         <div class="timeline">
-          <div class="timeline__entry">
-            <span class="timeline__index">01</span>
+          <div class="timeline-item">
+            <span class="timeline-item__dot"></span>
             <div>
               <h3>Automation and bot development</h3>
-              <p>
-                Multiple Python repositories show hands-on work with Telegram bots, schedulers,
-                AI integrations, webhooks, content handling, and assistant-style products.
-              </p>
+              <p>Python projects around Telegram bots, schedulers, AI integrations, and assistant-style products.</p>
             </div>
           </div>
-          <div class="timeline__entry">
-            <span class="timeline__index">02</span>
+          <div class="timeline-item">
+            <span class="timeline-item__dot"></span>
             <div>
               <h3>Backend and realtime systems</h3>
-              <p>
-                The repositories include Node.js and Go services with authentication, websockets,
-                messaging flows, payment integrations, storage, and production-facing backend logic.
-              </p>
+              <p>Node.js and Go services with auth, websockets, storage, payments, and production-facing backend logic.</p>
             </div>
           </div>
-          <div class="timeline__entry">
-            <span class="timeline__index">03</span>
+          <div class="timeline-item">
+            <span class="timeline-item__dot"></span>
             <div>
               <h3>Infrastructure and cloud operations</h3>
-              <p>
-                Terraform, Ansible, nginx, and service deployment files point to hands-on ownership
-                of cloud resources, provisioning, deployment flow, and day-two operations.
-              </p>
+              <p>Terraform, Ansible, nginx, and deployment files pointing to hands-on provisioning and day-two operations.</p>
             </div>
           </div>
         </div>
       </article>
 
-      <article class="feature">
-        <p class="section-tag">Capabilities</p>
+      <article class="surface section-card">
+        <p class="eyebrow">Capabilities</p>
         <h2>Where the value shows up</h2>
-        <ul class="editorial-list">
+        <ul class="detail-list">
           <li>Turning manual infrastructure work into repeatable, auditable flows</li>
           <li>Keeping cloud systems operable as service complexity grows</li>
           <li>Choosing architecture for team fit, not just trend fit</li>
@@ -147,8 +155,8 @@ document.querySelector('#app').innerHTML = `
         </ul>
       </article>
 
-      <article class="feature">
-        <p class="section-tag">Stack</p>
+      <article class="surface section-card section-card--wide" id="stack">
+        <p class="eyebrow">Stack</p>
         <h2>Cloud and infrastructure focus</h2>
         <div class="tag-cloud" aria-label="Cloud and infrastructure technology cloud">
           <span class="tag-cloud__item tag-cloud__item--xl">AWS</span>
@@ -174,44 +182,36 @@ document.querySelector('#app').innerHTML = `
         </div>
       </article>
 
-      <article class="feature feature--primary">
-        <p class="section-tag">Selected Resume Highlights</p>
+      <article class="surface section-card section-card--wide">
+        <p class="eyebrow">Selected Highlights</p>
         <h2>What the work reads like in practice</h2>
-        <div class="highlights">
-          <div class="highlight">
+        <div class="highlights-grid">
+          <article class="highlight-card">
             <h3>Cloud platform ownership</h3>
-            <p>Operating and shaping runtime environments that need resilience, clarity, and sane defaults.</p>
-          </div>
-          <div class="highlight">
+            <p>Operating runtime environments that need resilience, clarity, and sane defaults.</p>
+          </article>
+          <article class="highlight-card">
             <h3>Automation-first delivery</h3>
             <p>Reducing repetitive operational work with infrastructure as code and repeatable deployment paths.</p>
-          </div>
-          <div class="highlight">
+          </article>
+          <article class="highlight-card">
             <h3>Production feedback loops</h3>
             <p>Using logs, metrics, and alerts to make systems easier to run, debug, and improve.</p>
-          </div>
-          <div class="highlight">
-            <h3>Team-oriented infrastructure choices</h3>
-            <p>Favoring systems that are maintainable by the team that owns them, not just impressive on paper.</p>
-          </div>
-          <div class="highlight">
-            <h3>AI product integrations</h3>
-            <p>Shipping applications that connect LLM APIs, media tooling, bot interfaces, and backend workflows.</p>
-          </div>
-          <div class="highlight">
+          </article>
+          <article class="highlight-card">
             <h3>Cross-stack engineering</h3>
-            <p>Comfortable moving between frontend delivery, backend systems, automation scripts, bots, and infrastructure.</p>
-          </div>
+            <p>Moving comfortably between frontend delivery, backend systems, bots, and infrastructure.</p>
+          </article>
         </div>
       </article>
     </section>
 
-    <section class="contact-block" id="contact">
-      <div class="contact-block__intro">
-        <p class="section-tag">Contact</p>
+    <section class="surface contact-card" id="contact">
+      <div>
+        <p class="eyebrow">Contact</p>
         <h2>Best place to reach out</h2>
       </div>
-      <div class="contact-block__links">
+      <div class="contact-links">
         <a href="https://www.linkedin.com/in/vladimir-kozlov-5268b8a8/" target="_blank" rel="noreferrer">linkedin.com/in/vladimir-kozlov-5268b8a8</a>
         <a href="https://lizaisyourfriend.lol/cv/" target="_blank" rel="noreferrer">lizaisyourfriend.lol/cv</a>
       </div>
